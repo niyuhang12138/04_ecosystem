@@ -1,6 +1,4 @@
-mod error;
-
-pub use error::MyError;
+//! empty lib
 
 #[cfg(test)]
 mod tests {
