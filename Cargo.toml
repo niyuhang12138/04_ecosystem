@@ -7,14 +7,26 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.95"
+anyhow = "1.0.81"
+opentelemetry = "0.22.0"
+opentelemetry-otlp = { version = "0.15.0", features = ["tonic"] }
+opentelemetry_sdk = { version = "0.22.1", features = ["rt-tokio"] }
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.115"
 thiserror = "2.0.10"
-tracing = "0.1.41"
+tracing = "0.1.40"
 tracing-appender = "0.2.3"
-tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+tracing-opentelemetry = "0.23.0"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 
 [dev-dependencies]
-serde = "1.0.217"
-serde_json = "1.0.135"
 axum = { version = "0.8.1", features = ["http2", "query", "tracing"] }
-tokio = { version = "1.43.0", features = ["rt", "rt-multi-thread", "macros"] }
+serde_json = "1.0.115"
+tokio = { version = "1.43.0", features = [
+  "fs",
+  "rt",
+  "rt-multi-thread",
+  "macros",
+] }
+tokio-stream = "0.1.15"
+tokio-util = { version = "0.7.10", features = ["codec"] }
