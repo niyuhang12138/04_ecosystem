@@ -1,3 +1,7 @@
+mod error;
+
+pub use error::MyError;
+
 #[cfg(test)]
 mod tests {
     #[test]
