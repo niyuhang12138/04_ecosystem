@@ -9,6 +9,7 @@ license = "MIT"
 [dependencies]
 anyhow = "1.0.81"
 chrono = "0.4.39"
+derive_more = { version = "1.0.0", features = ["full"] }
 opentelemetry = "0.22.0"
 opentelemetry-otlp = { version = "0.15.0", features = ["tonic"] }
 opentelemetry_sdk = { version = "0.22.1", features = ["rt-tokio"] }
