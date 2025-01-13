@@ -18,3 +18,15 @@ Content-Type: application/json
 {
   "skills": ["Rust"]
 }
+
+
+### url shortener
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "url": "https://www.rust-lang.org/"
+}
+
+### url redirect
+GET http://localhost:8080/iH1c7h
